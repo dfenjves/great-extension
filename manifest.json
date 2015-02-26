@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "Great Tabs",
+  "description": "This extension shows a new funny gif in new tabs based on the day",
+  "version": "1.0",
+  "chrome_url_overrides": {
+    "newtab": "public/index.html"
+    },
+  "content_scripts": [{
+        "js": [ "public/js/jquery-1.11.2.min.js", "public/js/replacetext.js", "public/js/replace.js" ],
+        "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
